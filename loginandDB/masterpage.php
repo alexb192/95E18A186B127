@@ -26,6 +26,12 @@ require_once('common.php');
 </div>
 
 <body>
+  This is the real page! Everything else is a fake!
+  This is the real page! Everything else is a fake!
+  This is the real page! Everything else is a fake!
+  This is the real page! Everything else is a fake!
+  This is the real page! Everything else is a fake!
+  This is the real page! Everything else is a fake!
 </body>
 
 <div>
