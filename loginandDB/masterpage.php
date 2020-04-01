@@ -12,7 +12,7 @@ require_once('common.php');
 <div>
   <nav>
     <ul class="navbaritems">
-      <li class="navbarli"><a href="">Home</a></li>
+      <li class="navbarli"><a href="mainPage.php">Home</a></li>
       <li class="navbarli"><a href="">View Days</a></li>
       <li class="navbarli"><a href="">Settings</a></li>
       <?php if (!UserUtils::is_logged_in()) { ?>
@@ -26,12 +26,7 @@ require_once('common.php');
 </div>
 
 <body>
-  This is the real page! Everything else is a fake!
-  This is the real page! Everything else is a fake!
-  This is the real page! Everything else is a fake!
-  This is the real page! Everything else is a fake!
-  This is the real page! Everything else is a fake!
-  This is the real page! Everything else is a fake!
+
 </body>
 
 <div>

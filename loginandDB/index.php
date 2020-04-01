@@ -5,11 +5,11 @@ require_once('common.php');
 <html>
 <body>
 <?php if (!UserUtils::is_logged_in()) { ?>
-  <?php header("Location: masterpage.php");
+  <?php header("Location: mainPage.php");
   //exit()
   ?>
 <?php } else { ?>
-  <?php header("Location: masterpage.php");
+  <?php header("Location: mainPage.php");
   //exit()
   ?>
 <?php } ?>
