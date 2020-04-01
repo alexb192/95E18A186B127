@@ -32,7 +32,7 @@ require_once('common.php');
   <nav>
     <ul class="footeritems">
       <li>CS-3340 Group Project</li>
-      <li><a href="">Contact Us</a></li>
+      <li><a href="contactus.php">Contact Us</a></li>
     </ul>
   </nav>
 </div>
