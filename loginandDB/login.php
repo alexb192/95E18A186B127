@@ -15,7 +15,7 @@ require_once('common.php');
         <b>Username:</b> <input type="text" name="uname" /><br />
         <b>Password:</b> <input type="password" name="pass" /><br />
         <input class="submitbutton" type="submit" value="Log In" />
-        <button>Continue as Guest</button>
+        
       </form>
     </div>
   </body>
