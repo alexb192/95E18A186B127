@@ -12,13 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <script
-      src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"
+      src="https://cdn.tiny.cloud/1/4obol5ncui1w0606zz59fi5f6judhc1l4p2qkg6h7l2eqtjr/tinymce/5/tinymce.min.js"
       referrerpolicy="origin"
     ></script>
 
     <script>
       tinymce.init({
-        selector: "#mytextarea"
+        selector: "#mytextarea",
+        width: 600,
+        height: 300,
       });
     </script>
   </head>
@@ -30,7 +32,14 @@
     <div class="tinymce">
       <form method="post">
         <textarea id="mytextarea">Hello, World!</textarea>
+
+
+
+
       </form>
     </div>
+
+
+
   </body>
 </html>
