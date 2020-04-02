@@ -3,7 +3,6 @@ body {
   background-color: gainsboro;
   font-family: Arial, Helvetica, sans-serif;
   font-size: .8em;
-  padding-top: 90px;
   vertical-align: middle;
 }
 
@@ -14,14 +13,13 @@ input {
 }
 
 #planner-head {
-  padding: 0px;
+  padding: 10px;
   font-size: 30px;
   color: black;
   text-align: center;
 }
 
 #time-head {
-  align-items: flex-start;
   padding: 2px;
   font-size: 15px;
   color: black;

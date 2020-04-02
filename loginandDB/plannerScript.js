@@ -22,8 +22,8 @@ $(document).ready(function() {
     planTextArr = storedPlans;
   } else {
     // this should only occur on first time the app is loaded in the browser
-    planTextArr = new Array(9);
-    planTextArr[4] = "Default test text";
+    planTextArr = new Array(17);
+    planTextArr[7] = "Reminder: something something something.";
   }
 
   // set variable referencing planner element
