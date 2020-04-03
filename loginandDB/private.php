@@ -1,5 +1,7 @@
 <?php
 require_once('common.php');
+$content = "This is the page content";
+include('masterpage.php');
 
 if (!UserUtils::is_logged_in())
 {
