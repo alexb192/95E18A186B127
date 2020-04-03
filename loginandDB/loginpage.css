@@ -1,8 +1,6 @@
 body {
-  
   background-color: gainsboro;
   font-family: "Poppins", sans-serif;
-  
 }
 
 input {
@@ -19,7 +17,6 @@ button {
   justify-content: center;
 }
 
-
 form b {
   display: flex;
   justify-content: center;
@@ -30,7 +27,7 @@ form b {
 form {
   display: flex;
   flex-direction: column;
-  
+
   background-color: darkslategray;
   width: 350px;
   height: 350px;
@@ -45,7 +42,6 @@ form {
 
   display: flex;
   justify-content: center; */
-
 
 .submitbutton {
   margin-top: 70px;

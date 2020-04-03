@@ -21,18 +21,18 @@ include './masterpage_cookiecheck.php';
 ?>
 
 <!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="settings.css" />
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Settings</title>
-    
   </head>
   <body>
-    <h1 id="heading">Example Text</h1>
-    <div>
-      <label>Theme</label>
-      <a href="settings.php?choice=dark">Dark</a>
-      <a href="settings.php?choice=light">Light</a>
+    <div class="choices">
+      <h1>Styles</h1>
+      <a class="dark" href="settings.php?choice=dark">Dark</a>
+      <a class="light" href="settings.php?choice=light">Light</a>
     </div>
   </body>
 </html>
+
