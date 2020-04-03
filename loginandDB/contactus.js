@@ -1,10 +1,5 @@
 tinymce.init({
-  selector: "mytextarea",
-  setup: function(editor) {
-    editor.on("change", function() {
-      editor.save();
-    });
-  }
+  selector: "#mytextarea"
 });
 
 function getText() {
