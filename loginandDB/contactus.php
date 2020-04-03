@@ -21,7 +21,7 @@
 
   <body>
     <h1>Contact Us</h1>
-    <h2>We love to hear your feedback!</h2>
+    <h2>We would love to hear your feedback!</h2>
     
     <div class="tinymce">
       <form method="post">
