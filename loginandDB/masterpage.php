@@ -3,6 +3,7 @@ require_once('common.php');
 ?>
 
 <!DOCTYPE html>
+<html>
 <link rel="stylesheet" type="text/css" href="masterpagestyle.css" />
 
 <title>
@@ -30,12 +31,17 @@ require_once('common.php');
 </body>
 
 <div>
+
+<footer id="footer"> 
+
   <nav>
     <ul class="footeritems">
       <li>CS-3340 Group Project</li>
       <li><a href="contactus.php">Contact Us</a></li>
     </ul>
   </nav>
-</div>
 
+</footer>  
+</div>
+</html>
 

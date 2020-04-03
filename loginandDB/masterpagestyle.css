@@ -9,15 +9,28 @@ div nav ul {
   list-style: inside;
 }
 
+
+#footer {
+
+  position: absolute;
+  bottom: 0;
+  
+  
+  }
+
 .footeritems {
   display: flex;
   flex-direction: row;
+
+  
   height: 70px;
   list-style-type: none;
   padding: 10px;
   bottom: 0;
-  position: fixed;
+  position: fixed; 
 }
+
+
 
 .footeritems li {
   text-align: center;
