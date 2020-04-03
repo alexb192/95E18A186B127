@@ -10,14 +10,14 @@ require_once('common.php');
 
 <div>
   <nav>
-    <ul class="navbaritems">
-      <li class="navbarli"><a href="mainPage.php">Home</a></li>
-      <li class="navbarli"><a href="viewcalendar.php">View Calendar</a></li>
-      <li class="navbarli"><a href="">Settings</a></li>
+    <ul id="navbaritems" class="navbaritems">
+      <li id="navbarli" class="navbarli"><a href="mainPage.php">Home</a></li>
+      <li id="navbarli" class="navbarli"><a href="viewcalendar.php">View Calendar</a></li>
+      <li id="navbarli" class="navbarli"><a href="">Settings</a></li>
       <?php if (!UserUtils::is_logged_in()) { ?>
-  <li class="navbarli"><a href="login.php">Log In</a></li>
+  <li id="navbarli" class="navbarli"><a href="login.php">Log In</a></li>
 <?php } else { ?>
-  <li class="navbarli"><a href="logout.php">Log Out</a></li>
+  <li id="navbarli" class="navbarli"><a href="logout.php">Log Out</a></li>
 <?php } ?>
       
     </ul>
