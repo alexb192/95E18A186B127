@@ -6,7 +6,7 @@
 <?php
   if (isset($_GET['choice']))
   {
-    $choice = $_GET['choice']
+    $choice = $_GET['choice'];
     if ($choice == 'dark' || $choice == 'light')
     {
       setcookie("sitestyle", $choice, time()+60*60*24*100, "/");  // set a cookie for 30 days remembering choice
@@ -25,7 +25,7 @@ include './masterpage_cookiecheck.php';
   <head>
     <meta charset="utf-8" />
     <title>Settings</title>
-    <script src="./settings.js"></script>
+    
   </head>
   <body>
     <h1 id="heading">Example Text</h1>

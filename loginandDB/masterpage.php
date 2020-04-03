@@ -18,7 +18,7 @@ include './masterpage_cookiecheck.php';
         <li id="navbarli" class="navbarli">
           <a href="viewcalendar.php">View Calendar</a>
         </li>
-        <li id="navbarli" class="navbarli"><a href="">Settings</a></li>
+        <li id="navbarli" class="navbarli"><a href="settings.php">Settings</a></li>
         <?php if (!UserUtils::is_logged_in()) { ?>
         <li id="navbarli" class="navbarli"><a href="login.php">Log In</a></li>
         <?php } else { ?>
