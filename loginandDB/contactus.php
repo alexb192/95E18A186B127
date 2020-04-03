@@ -24,14 +24,14 @@
     <h2>We would love to hear your feedback!</h2>
     
     <div class="tinymce">
-      <form method="post" action="somepage">
-        <textarea name="content" style="width:100%">
-        </textarea>
+      <form method="post">
+        <textarea id="mytextarea"></textarea>
       </form>
     </div>
-
     <form method="post">
-      <input class="submitbutton" type="submit" value="Submit" />
-    </form>
+
+        <input class="submitbutton" type="submit" value="Submit" />
+        
+      </form>
   </body>
 </html>
