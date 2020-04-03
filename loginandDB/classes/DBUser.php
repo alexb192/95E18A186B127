@@ -168,6 +168,31 @@ ZZEOF;
       return FALSE;
     }
   }
+  
+  // public function check_admin($user)
+  // {
+  //   $entry = array( ':user' => $user );
+  //   try
+  //   {
+      
+  //     $sql = 'SELECT isadmin FROM users WHERE user = :user';
+  //     $result = mysqli_query($sql);
+      
+  //     if (mysqli_fetch_assoc($result) == 0)
+  //     {
+  //       return TRUE;
+  //     }
+  //     else 
+  //     {
+  //       return FALSE;
+  //     }
+  
+  //   }
+  //   catch (PDOException $e)
+  //   {
+  //     return FALSE;
+  //   }
+  // }
 
   //
   // lookup($user)

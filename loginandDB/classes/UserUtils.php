@@ -5,18 +5,10 @@ final class UserUtils
   {
     return array_key_exists('is-logged-in', $_SESSION);
   }
-  public static function is_logged_in_admin()
-  {
-    return array_key_exists('is-logged-in-admin', $_SESSION);
-  }
+
   public static function log_in_user($user)
   {
     $_SESSION['is-logged-in'] = $user;
-  }
-
-  public static function log_in_admin($user)
-  {
-    $_SESSION['is-logged-in-admin'] = $user;
   }
 
   public static function get_user_logged_in()
@@ -32,5 +24,4 @@ final class UserUtils
     unset($_SESSION['is-logged-in']);
   }
 }
-
 ?>

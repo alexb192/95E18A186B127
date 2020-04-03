@@ -4,7 +4,8 @@ require_once('common.php');
 //header('ContentType: text/plain');
 //print_r($_POST);
 
-$VALID_REDIRECT='private.php';
+$VALID_REDIRECT='mainPage.php';
+$VALID_ADMIN_REDIRECT = 'private.php';
 $INVALID_REDIRECT='login.php';
 $REDIRECT=$INVALID_REDIRECT;
 
@@ -19,16 +20,22 @@ if (count($_POST) == 2
   {
     // valid login
     UserUtils::log_in_user($_POST['uname']);
-    $REDIRECT=$VALID_REDIRECT; 
+    $REDIRECT=$VALID_ADMIN_REDIRECT;
+
+    // if ($db->check_admin($_POST['uname']))
+    // {
+    //   $REDIRECT=$VALID_ADMIN_REDIRECT;
+    // }
+    // else 
+    // {
+    //   $REDIRECT=$VALID_REDIRECT; 
+    // }  
   }
   else
   {
     // invalid login
     UserUtils::log_out_user();
   }
-
-
-
 }
 else
 {
