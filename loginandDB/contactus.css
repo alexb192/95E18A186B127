@@ -1,5 +1,7 @@
 .tinymce {
   display: flex;
   justify-content: center;
-  width: 800;
+  width: 100%;
+  
+  
 }

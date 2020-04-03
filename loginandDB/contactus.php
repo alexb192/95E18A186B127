@@ -15,20 +15,14 @@
       src="https://cdn.tiny.cloud/1/4obol5ncui1w0606zz59fi5f6judhc1l4p2qkg6h7l2eqtjr/tinymce/5/tinymce.min.js"
       referrerpolicy="origin"
     ></script>
+    <script src='./contactus.js'></script>
 
-    <script>
-      tinymce.init({
-        selector: "#mytextarea",
-        width: 600,
-        height: 300,
-      });
-    </script>
   </head>
 
   <body>
     <h1>Contact Us</h1>
     <h2>We love to hear your feedback!</h2>
-
+    
     <div class="tinymce">
       <form method="post">
         <textarea id="mytextarea">Hello, World!</textarea>
@@ -38,6 +32,9 @@
 
       </form>
     </div>
+
+
+
 
 
 
