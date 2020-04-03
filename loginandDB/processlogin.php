@@ -17,17 +17,9 @@ if (count($_POST) == 2
   $db = new DBUser();
   if ($db->check_user_pass($_POST['uname'], $_POST['pass']))
   {
-    if($db->check_is_admin($_POST['isadmin']))
-    {
-      UserUtils::log_in_admin($_POST['uname']);
-      $REDIRECT=$VALID_REDIRECT;
-    }
-    else
-    {
-      // valid login
-      UserUtils::log_in_user($_POST['uname']);
-      $REDIRECT=$VALID_REDIRECT;
-    }
+    // valid login
+    UserUtils::log_in_user($_POST['uname']);
+    $REDIRECT=$VALID_REDIRECT; 
   }
   else
   {
