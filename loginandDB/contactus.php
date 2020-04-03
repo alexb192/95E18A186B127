@@ -25,11 +25,7 @@
     
     <div class="tinymce">
       <form method="post">
-        <textarea id="mytextarea">Hello, World!</textarea>
-
-
-
-
+        <textarea id="mytextarea" type="text" name="tinymceText" value="<?php echo htmlspecialchars($_POST['tinymceText'] ?? '', ENT_QUOTES); ?>"></textarea>
       </form>
     </div>
     <form method="post">
@@ -37,10 +33,5 @@
         <input class="submitbutton" type="submit" value="Submit" />
         
       </form>
-
-
-
-
-
   </body>
 </html>
