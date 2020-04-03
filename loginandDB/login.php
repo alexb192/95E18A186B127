@@ -11,7 +11,7 @@ include('masterpage.php');
 
 <html>
   <head>
-    <title>Landing Page</title>
+    <title>Login</title>
   </head>
 
   <body>

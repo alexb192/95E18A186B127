@@ -6,15 +6,13 @@ require_once('common.php');
 <html>
 <link rel="stylesheet" type="text/css" href="masterpagestyle.css" />
 
-<title>
-  Home Page - Planner
-</title>
+
 
 <div>
   <nav>
     <ul class="navbaritems">
       <li class="navbarli"><a href="mainPage.php">Home</a></li>
-      <li class="navbarli"><a href="">View Days</a></li>
+      <li class="navbarli"><a href="viewcalendar.php">View Calendar</a></li>
       <li class="navbarli"><a href="">Settings</a></li>
       <?php if (!UserUtils::is_logged_in()) { ?>
   <li class="navbarli"><a href="login.php">Log In</a></li>
