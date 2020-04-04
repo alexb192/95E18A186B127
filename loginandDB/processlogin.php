@@ -8,6 +8,9 @@ $VALID_REDIRECT='mainPage.php';
 $VALID_ADMIN_REDIRECT = 'private.php';
 $INVALID_REDIRECT='login.php';
 $REDIRECT=$INVALID_REDIRECT;
+$x = 'var1';
+$_SESSION['var'] = $x;
+
 
 // check if the POST array format is as expected...
 if (count($_POST) == 2 
@@ -20,6 +23,7 @@ if (count($_POST) == 2
   {
     // valid login
     UserUtils::log_in_user($_POST['uname']);
+    $x = FALSE;
     $REDIRECT=$VALID_ADMIN_REDIRECT;
 
     // if ($db->check_admin($_POST['uname']))
@@ -34,19 +38,21 @@ if (count($_POST) == 2
   else
   {
     // invalid login
-    login::onPasswordFail();
+    $x = TRUE;
     UserUtils::log_out_user();
-    sleep(2);
   }
 }
 else
 {
   // invalid POST
-  login::onPasswordFail();
+  $x = TRUE;
   UserUtils::log_out_user();
-  sleep(2);
 }
 
 // redirect the user to an appropriate page...
 HTTPUtils::redirect($REDIRECT);
+
+
+
 ?>
+

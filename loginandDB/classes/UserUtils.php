@@ -1,6 +1,7 @@
 <?php
 final class UserUtils
 {
+  
   public static function is_logged_in()
   {
     return array_key_exists('is-logged-in', $_SESSION);
@@ -22,6 +23,8 @@ final class UserUtils
   public static function log_out_user()
   {
     unset($_SESSION['is-logged-in']);
+
+   
   }
 }
 ?>
