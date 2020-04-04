@@ -168,25 +168,6 @@ ZZEOF;
       return FALSE;
     }
   }
-
-  public function check_admin($user)
-  {
-    $sql = "SELECT * FROM users WHERE user='$user' AND isadmin = 1 LIMIT 1";
-    $stmt = $this->db_handle()->prepare($sql);
-    $stmt->execute($entry);
-    $result = $stmt->fetchAll();
-
-    if (mysqli_num_rows($result) == 1)
-    {
-
-      trigger_error("Admin has been found!");
-
-    }
-    else
-    {
-      trigger_error("Admin not found, for some reason" + mysqli_num_rows($result));
-    }
-  }
   
   // public function check_admin($user)
   // {

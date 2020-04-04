@@ -49,8 +49,6 @@ else
   UserUtils::log_out_user();
 }
 
-DBUser::check_admin("admin"); // testing check_admin function
-
 // redirect the user to an appropriate page...
 HTTPUtils::redirect($REDIRECT);
 
