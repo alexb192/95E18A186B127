@@ -25,7 +25,9 @@
     
     <div class="tinymce">
       <form method="post">
-        <textarea id="mytextarea"></textarea>
+        <!-- <textarea id="mytextarea"></textarea> -->
+        <textarea id="mytextarea" name="event"><? echo $_POST['event'] ?></textarea>
+
       </form>
     </div>
     <form method="post">
