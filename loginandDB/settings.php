@@ -27,7 +27,7 @@ include './masterpage_cookiecheck.php';
     <meta charset="utf-8" />
     <title>Settings</title>
   </head>
-  <body>
+  <body class="stylesbody">
     <div class="choices">
       <h1>Styles</h1>
       <a class="dark" href="settings.php?choice=dark">Dark</a>
