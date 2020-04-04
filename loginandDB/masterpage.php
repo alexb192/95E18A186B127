@@ -20,7 +20,7 @@ include './masterpage_cookiecheck.php';
         </li>
         <li id="navbarli" class="navbarli"><a href="settings.php">Settings</a></li>
         <?php if (!UserUtils::is_logged_in()) { ?>
-        <li id="navbarli" class="navbarli"><a href="login.php?variable1=FALSE">Log In</a></li>
+        <li id="navbarli" class="navbarli"><a href="login.php">Log In</a></li>
         <?php } else { ?>
         <li id="navbarli" class="navbarli"><a href="logout.php">Log Out</a></li>
         <?php } ?>
