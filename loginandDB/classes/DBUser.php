@@ -171,14 +171,20 @@ ZZEOF;
 
   public function check_admin($user)
   {
-    $query = "SELECT * FROM users WHERE user='$user' AND isadmin = 1 LIMIT 1";
-    $results = mysqli_query($db, $query);
+    $sql = "SELECT * FROM users WHERE user='$user' AND isadmin = 1 LIMIT 1";
+    $stmt = $this->db_handle()->prepare($sql);
+    $stmt->execute($entry);
+    $result = $stmt->fetchAll();
 
-    if (mysqli_num_rows($results) == 1)
+    if (mysqli_num_rows($result) == 1)
     {
 
-      trigger_error("Admin has been found!")
+      trigger_error("Admin has been found!");
 
+    }
+    else
+    {
+      trigger_error("Admin not found, for some reason" + mysqli_num_rows($result));
     }
   }
   
