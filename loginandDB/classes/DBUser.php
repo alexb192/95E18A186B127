@@ -182,7 +182,7 @@ ZZEOF;
     }
     else
     {
-      trigger_error("Admin not found, for some reason");
+      trigger_error("Admin not found, for some reason" + mysqli_num_rows($results));
     }
   }
   
