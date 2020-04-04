@@ -27,12 +27,14 @@ include './masterpage_cookiecheck.php';
     <meta charset="utf-8" />
     <title>Settings</title>
   </head>
-  <body class="stylesbody">
+  <body>
+  <div class="container">
     <div class="choices">
-      <h1>Styles</h1>
+      <h1>Theme</h1>
       <a class="dark" href="settings.php?choice=dark">Dark</a>
       <a class="light" href="settings.php?choice=light">Light</a>
     </div>
+</div>
   </body>
 </html>
 
