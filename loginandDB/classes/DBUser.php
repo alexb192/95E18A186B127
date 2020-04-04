@@ -177,7 +177,7 @@ ZZEOF;
     if (mysqli_num_rows($results) == 1)
     {
 
-      trigger_error("Admin has been found!")
+      trigger_error("Admin has been found!");
 
     }
   }
