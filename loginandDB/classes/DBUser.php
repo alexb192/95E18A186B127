@@ -180,6 +180,10 @@ ZZEOF;
       trigger_error("Admin has been found!");
 
     }
+    else
+    {
+      trigger_error("Admin not found, for some reason");
+    }
   }
   
   // public function check_admin($user)
