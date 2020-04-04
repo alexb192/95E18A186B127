@@ -27,3 +27,13 @@ include('masterpage.php');
     </div>
   </body>
 </html>
+
+<?php
+  class login
+  {
+    public function onPasswordFail()
+    {
+      echo '<script>alert("Invalid Password")</script>';
+    }
+  }
+?>

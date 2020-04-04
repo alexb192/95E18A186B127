@@ -34,13 +34,17 @@ if (count($_POST) == 2
   else
   {
     // invalid login
+    login::onPasswordFail();
     UserUtils::log_out_user();
+    sleep(2);
   }
 }
 else
 {
   // invalid POST
+  login::onPasswordFail();
   UserUtils::log_out_user();
+  sleep(2);
 }
 
 // redirect the user to an appropriate page...
