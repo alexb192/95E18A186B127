@@ -3,7 +3,6 @@ require_once('common.php');
 $content = "This is the page content";
 include('masterpage.php');
 $y =  $_SESSION['var'];
-// $y = $GET['variable1'];
 ?>
 
 <!DOCTYPE html>
@@ -14,16 +13,7 @@ $y =  $_SESSION['var'];
     <title>Login</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("input").focus(function(){
-    $(this).css("background-color", "yellow");
-  });
-  $("input").blur(function(){
-    $(this).css("background-color", "green");
-  });
-});
-</script>
+    <script src='./loginpage.js'></script>
   </head>
 
   <body>
@@ -32,8 +22,11 @@ $(document).ready(function(){
       <form action="processlogin.php" method="post">
         <b>Username:</b> <input type="text" oninvalid="alert('You must enter a username!');" required name="uname" required/><br />
         <b>Password:</b> <input type="password" oninvalid="alert('You must enter a password!');" required name="pass" required/><br />
-        <input class="submitbutton" type="submit" value="Log In" />
+         <input class="submitbutton" type="submit" value="Log In" /> <!-- onclick= "return invalidPrompt($y)" /> -->
+        
         <?php InvalidLogin::onPasswordFail($y);?> 
+        
+
       </form>   
     </div>
   </body>
