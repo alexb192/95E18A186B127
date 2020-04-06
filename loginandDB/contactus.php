@@ -26,7 +26,7 @@
     <div class="tinymce">
       <form method="post">
         <!-- <textarea id="mytextarea"></textarea> -->
-        <textarea id="mytextarea" name="event"><? echo $_POST['event'] ?></textarea>
+         <textarea id="mytextarea"   name="event"></textarea> 
 
       </form>
     </div>
@@ -35,5 +35,8 @@
         <input class="submitbutton" type="submit" value="Submit" />
         
       </form>
+      <a href="insertxml.php">Insert</a>
   </body>
 </html>
+
+<!--  <?php //echo $_POST['event'] ?> -->
