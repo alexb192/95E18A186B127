@@ -7,16 +7,5 @@ $(document).ready(function(){
     });
   });
 
-  function invalidPrompt(varY) {
-   
-    if(varY == TRUE)
-    {
-        alert("Invalid Login!");
-        return true;
-    }
-
-    else if(varY == FALSE)
-    {
-        return true;
-    }  
- }
+ 
+ 

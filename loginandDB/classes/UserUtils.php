@@ -14,6 +14,7 @@ final class UserUtils
   public static function log_in_user($user)
   {
     $_SESSION['is-logged-in'] = $user;
+    $_SESSION['var'] = FALSE;
   }
 
   public static function log_in_admin($user)

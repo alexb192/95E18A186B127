@@ -2,7 +2,6 @@
 require_once('common.php');
 $content = "This is the page content";
 include('masterpage.php');
-$y = $_SESSION['var'];
 
 if (UserUtils::is_logged_in())
 {
@@ -28,11 +27,15 @@ if (UserUtils::is_logged_in())
       <form action="processlogin.php" method="post">
         <b>Username:</b> <input type="text" oninvalid="alert('You must enter a username!');" required name="uname" required/><br />
         <b>Password:</b> <input type="password" oninvalid="alert('You must enter a password!');" required name="pass" required/><br />
-         <input class="submitbutton" type="submit" value="Log In" /> <!-- onclick= "return invalidPrompt($y)" /> -->
-        
-        <?php InvalidLogin::onPasswordFail($y);?> 
+        <input class="submitbutton" type="submit" value="Log In" />
+         
+        <?php
+          $y = $_SESSION['var'];
+          InvalidLogin::onPasswordFail($y);
+        ?>
 
       </form>   
+
     </div>
   </body>
 </html>

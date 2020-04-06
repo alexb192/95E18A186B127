@@ -6,6 +6,7 @@
         if($x)
         {
             echo '<script>alert("Invalid Password")</script>';
+            unset($_SESSION['var']);
         }
         else
         {

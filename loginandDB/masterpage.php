@@ -1,7 +1,6 @@
 <?php
 require_once('common.php');
 include './masterpage_cookiecheck.php';
-$isadmin = $_SESSION['var2'];
 ?>
 
 <!DOCTYPE html>
