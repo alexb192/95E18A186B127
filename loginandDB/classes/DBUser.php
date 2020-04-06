@@ -169,30 +169,30 @@ ZZEOF;
     }
   }
   
-  // public function check_admin($user)
-  // {
-  //   $entry = array( ':user' => $user );
-  //   try
-  //   {
-      
-  //     $sql = 'SELECT isadmin FROM users WHERE user = :user';
-  //     $result = mysqli_query($sql);
-      
-  //     if (mysqli_fetch_assoc($result) == 0)
-  //     {
-  //       return TRUE;
-  //     }
-  //     else 
-  //     {
-  //       return FALSE;
-  //     }
-  
-  //   }
-  //   catch (PDOException $e)
-  //   {
-  //     return FALSE;
-  //   }
-  // }
+  public function check_admin($user)
+  {
+    $mysqli = new mysqli("localhost", "alian_project", "3340WWW", "alian_db1");
+
+    try
+    {
+      if ($result = $mysqli->query("SELECT * FROM users WHERE user='$user' AND isadmin = 1 LIMIT 1")) {
+
+      if (mysqli_num_rows($result) === 1)
+      {
+        return TRUE;
+      }
+      else 
+      {
+        return FALSE;
+      }
+      $result -> free_result();
+    }
+    }
+    catch (PDOException $e)
+    {
+      return FALSE;
+    }
+  }
 
   //
   // lookup($user)
