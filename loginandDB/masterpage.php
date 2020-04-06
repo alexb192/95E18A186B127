@@ -39,7 +39,11 @@ $isadmin = $_SESSION['var2'];
       <nav>
         <ul class="footeritems">
           <li>CS-3340 Group Project</li>
-          <li><a href="contactus.php">Contact Us</a></li>
+          <?php if (UserUtils::is_admin()) { ?>
+            <li><a href="">View Tickets</a></li>
+          <?php } else { ?>
+            <li><a href="contactus.php">Contact Us</a></li>
+          <?php } ?>
         </ul>
       </nav>
     </footer>
