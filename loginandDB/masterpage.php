@@ -1,6 +1,7 @@
 <?php
 require_once('common.php');
 include './masterpage_cookiecheck.php';
+$isadmin = $_SESSION['var2'];
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +23,11 @@ include './masterpage_cookiecheck.php';
         <?php if (!UserUtils::is_logged_in()) { ?>
         <li id="navbarli" class="navbarli"><a href="login.php">Log In</a></li>
         <?php } else { ?>
-        <li id="navbarli" class="navbarli"><a href="logout.php">Log Out</a></li>
+        <?php if (UserUtils::is_admin()) { ?>
+        <li id="navbarli" class="navbarli"><a href="adminpage.php">Admin Hub</a></li>
         <?php } ?>
+        <li id="navbarli" class="navbarli"><a href="logout.php">Log Out</a></li>
+        <?php }?>
       </ul>
     </nav>
   </div>

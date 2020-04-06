@@ -177,21 +177,22 @@ ZZEOF;
     {
       if ($result = $mysqli->query("SELECT * FROM users WHERE user='$user' AND isadmin = 1 LIMIT 1")) {
 
-      if (mysqli_num_rows($result) === 1)
-      {
-        return TRUE;
+        if (mysqli_num_rows($result) === 1)
+        {
+          return TRUE;
+        }
+        else 
+        {
+          return FALSE;
+        }
+        $result -> free_result();
       }
-      else 
-      {
-        return FALSE;
-      }
-      $result -> free_result();
-    }
     }
     catch (PDOException $e)
     {
       return FALSE;
     }
+    $mysqli -> close();
   }
 
   //

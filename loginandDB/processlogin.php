@@ -5,12 +5,11 @@ require_once('common.php');
 //print_r($_POST);
 
 $VALID_REDIRECT='mainPage.php';
-$VALID_ADMIN_REDIRECT = 'private.php';
+$VALID_ADMIN_REDIRECT = 'adminpage.php';
 $INVALID_REDIRECT='login.php';
 $REDIRECT=$INVALID_REDIRECT;
 $x = 'var1';
 $_SESSION['var'] = $x;
-
 
 // check if the POST array format is as expected...
 if (count($_POST) == 2 
@@ -28,6 +27,7 @@ if (count($_POST) == 2
     // redirect if the user is admin
     if ($db->check_admin($_POST['uname']))
     {
+      UserUtils::log_in_admin($_POST['uname']);
       $REDIRECT=$VALID_ADMIN_REDIRECT;
     }
     // redirect if user is not admin
@@ -52,8 +52,5 @@ else
 
 // redirect the user to an appropriate page...
 HTTPUtils::redirect($REDIRECT);
-
-
-
 ?>
 

@@ -18,7 +18,5 @@ $(document).ready(function(){
     else if(varY == FALSE)
     {
         return true;
-    }
-        
-    
+    }  
  }

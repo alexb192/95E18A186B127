@@ -2,7 +2,13 @@
 require_once('common.php');
 $content = "This is the page content";
 include('masterpage.php');
-$y =  $_SESSION['var'];
+$y = $_SESSION['var'];
+
+if (UserUtils::is_logged_in())
+{
+  HTTPUtils::redirect('mainPage.php');
+  exit(0);
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +31,6 @@ $y =  $_SESSION['var'];
          <input class="submitbutton" type="submit" value="Log In" /> <!-- onclick= "return invalidPrompt($y)" /> -->
         
         <?php InvalidLogin::onPasswordFail($y);?> 
-        
 
       </form>   
     </div>
