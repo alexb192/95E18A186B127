@@ -17,18 +17,16 @@ if (!UserUtils::is_admin())
             <?php
                 $db = new DBTickets();
                 $everything = $db->lookup_all();
-                print_r($everything);
-                foreach ($everything as $ticketid=>$user=>$text)
+                if (sizeof($everything) % 3 == 0)
                 {
-            ?>
 
-                <tr>
-                    <td><?php echo $ticketid; ?></td>
-                    <td><?php echo $user; ?></td>
-                    <td><?php echo $text; ?></td>
-                </tr>
+                    foreach ($everything as $var)
+                    {
+                        echo "\n", $var['ticket_id'], "\t\t", $var['user'], "\t\t", $var['contents'];
+                    }
 
-            <?php
+                } else {
+                    echo "DATABASE IS WACK";
                 }
             ?>
         </table>
