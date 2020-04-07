@@ -1,4 +1,5 @@
 <?php
+    require_once('common.php');
     $content = "This is the page content";
     include('masterpage.php');
 ?>
@@ -24,17 +25,19 @@
     <h2>We would love to hear your feedback!</h2>
     
     <div class="tinymce">
-      <form method="post">
-        <!-- <textarea id="mytextarea"></textarea> -->
-         <textarea id="mytextarea"   name="event"></textarea> 
+      <form action="processcontactus.php" method="post">
+      <!-- <form method="post"> -->
 
+        <textarea name = "comments" id="mytextarea"></textarea>
+       
+        <input class="submitbutton" type="submit" value="Submit" />
       </form>
     </div>
-    <form method="post">
+    <!-- <form action="processcontactus.php" method="post">
 
-        <input class="submitbutton" type="submit" value="Submit" />
         
-      </form>
+        
+      </form> -->
       
   </body>
 </html>

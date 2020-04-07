@@ -22,7 +22,6 @@ final class UserUtils
     $_SESSION['is-admin'] = $user;
   }
 
-
   public static function get_user_logged_in()
   {
     if (!self::is_logged_in())

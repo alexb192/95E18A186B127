@@ -8,6 +8,7 @@ $VALID_REDIRECT='mainPage.php';
 $VALID_ADMIN_REDIRECT = 'adminpage.php';
 $INVALID_REDIRECT='login.php';
 $REDIRECT=$INVALID_REDIRECT;
+// session variable to track invalid login
 $x = 'var1';
 $_SESSION['var'] = $x;
 
@@ -23,7 +24,7 @@ if (count($_POST) == 2
     // valid login
     UserUtils::log_in_user($_POST['uname']);
     $x = FALSE;
-
+    
     // redirect if the user is admin
     if ($db->check_admin($_POST['uname']))
     {

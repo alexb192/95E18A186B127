@@ -131,5 +131,13 @@ ZZEOF;
     $stmt->execute();
     return $stmt->fetchAll();
   }
+
+  public function get_highest_ticketid()
+  {
+    $sql = 'SELECT MAX(ticketid) FROM tickets';
+    $stmt = $this->db_handle()->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+  }
 }
 ?>

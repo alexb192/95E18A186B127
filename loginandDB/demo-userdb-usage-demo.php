@@ -39,7 +39,8 @@ try
   
   */
 
-
+  // $dbt = new DBTickets();
+  // $dbt->insert(313, 'user', 'Comment goes here from users');
   echo "Done.\n";
 
 }
