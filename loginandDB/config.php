@@ -15,7 +15,7 @@ $CFG->site_wide_password_salt = '154ererf4w2fy56rytr6';
 //   tables in this site's code will check this setting to see if
 //   it has been set to FALSE. If it has not been set to FALSE, then
 //   the function will fail to execute as a safety precaution.
-$CFG->db_admin_prohibit_create_drop = TRUE;
+$CFG->db_admin_prohibit_create_drop = False;
 
 // Database connectivity information...
 // db_dsn:

@@ -35,7 +35,7 @@
         <input class="submitbutton" type="submit" value="Submit" />
         
       </form>
-      <a href="insertxml.php">Insert</a>
+      
   </body>
 </html>
 

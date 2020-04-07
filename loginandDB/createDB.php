@@ -2,11 +2,11 @@
 require_once('common.php');
 include('masterpage.php');
 
-if (!UserUtils::is_admin())
-{
-  HTTPUtils::redirect('mainPage.php');
-  exit(0);
-}
+// if (!UserUtils::is_admin())
+// {
+//   HTTPUtils::redirect('mainPage.php');
+//   exit(0);
+// }
 ?>
 <!DOCTYPE html>
 <html>
