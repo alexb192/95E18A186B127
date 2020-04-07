@@ -39,7 +39,7 @@ include './masterpage_cookiecheck.php';
         <ul class="footeritems">
           <li>CS-3340 Group Project</li>
           <?php if (UserUtils::is_admin()) { ?>
-            <li><a href="">View Tickets</a></li>
+            <li><a href="viewtickets.php">View Tickets</a></li>
           <?php } else { ?>
             <li><a href="contactus.php">Contact Us</a></li>
           <?php } ?>

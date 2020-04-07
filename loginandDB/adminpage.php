@@ -18,7 +18,7 @@ if (!UserUtils::is_admin())
   alt="Admin Image" />
 <br />
 <button onclick="window.location.href = 'createDB.php' ">Database Tools</button>
-<button onclick="window.location.href = '' ">View Tickets</button>
+<button onclick="window.location.href = 'viewtickets.php' ">View Tickets</button>
 <br />
 </body>
 </html>
