@@ -15,7 +15,7 @@ if (!UserUtils::is_admin())
     <body>
         <table>
             <?php
-                $db = new DBUser();
+                $db = new DBTickets();
                 $everything = $db->lookup_all();
                 print_r($everything);
                 foreach ($everything as $ticketid=>$user=>$text)
