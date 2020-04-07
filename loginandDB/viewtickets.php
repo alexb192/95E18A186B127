@@ -13,7 +13,7 @@ if (!UserUtils::is_admin())
 
 <html>
     <body>
-        <table style="width:100%>
+        <table>
                     <tr>
                         <th>TicketID</th>
                         <th>Username</th>
@@ -24,10 +24,7 @@ if (!UserUtils::is_admin())
                 $everything = $db->lookup_all();
 
                 foreach ($everything as $var)
-                {
-                    // echo "\n", $var[0], "\t\t", $var[1], "\t\t", $var[2];
-                    echo "<tr><td>$var[0]</td><td>$var[1]</td><td>$var[2]</td></tr>";
-                }
+                    echo "<tr><td>$var[0]</td><td>$var[1]</td><td>$var[2]</td></tr>"; 
             ?>
         </table>
     </body>
