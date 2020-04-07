@@ -26,7 +26,7 @@ if (!UserUtils::is_admin())
 
                 foreach ($everything as $var)
                 {
-                    echo "<tr id="$counter"><td>$var[0]</td><td>$var[1]</td><td>$var[2]</td><td><button onclick="deleteRow($counter)">Delete</button></td></tr>";
+                    echo "<tr id='$counter'><td>$var[0]</td><td>$var[1]</td><td>$var[2]</td><td><button onclick='deleteRow($counter)'>Delete</button></td></tr>";
                     $counter++;
                 }
             ?>
@@ -36,11 +36,6 @@ if (!UserUtils::is_admin())
 
 <script>
     function deleteRow(var rowNumber) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("ticketTable").deleteRow(rowNumber);
-            }
-        };
+        document.getElementById("ticketTable").deleteRow(rowNumber);
     }
 </script>
