@@ -21,7 +21,7 @@ include('masterpage.php');
 
     <body>
         <h1>Database Tools</h2>
-        <ul>
+        <ul class="dbtools">
             <li><a href="demo-userdb-create.php">Create DB</a></li>
             <li><a href="demo-userdb-usage-demo.php">DB Usage</a></li>
             <li><a href="demo-userdb-destroy.php">Destroy DB</a></li>
