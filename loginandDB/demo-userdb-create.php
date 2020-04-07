@@ -13,6 +13,11 @@ try
   echo "Creating users DB...\n";
   $db = new DBUser();
   $db->admin_create_all_structures();
+
+  echo "Creating tickets table...\n";
+  $dbt = new DBTickets();
+  $dbt->admin_create_all_structures();
+
   echo "Finished creating DB.\n";
 }
 catch (Exception $e)

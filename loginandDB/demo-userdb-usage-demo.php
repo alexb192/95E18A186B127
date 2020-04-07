@@ -36,10 +36,11 @@ try
   echo $db->check_user_pass('john','hd834h8irtj9') ? 'FAIL' : 'PASS';
   echo "\n6. Erasing suzy...\n";
   $db->erase('suzy');
-  echo "Done.\n";
+  
   */
 
-  
+
+  echo "Done.\n";
 
 }
 catch (Exception $e)

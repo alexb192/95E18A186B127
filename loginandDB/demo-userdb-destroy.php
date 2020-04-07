@@ -10,6 +10,9 @@ require_once('common.php');
 header('Content-Type: text/plain');
 try
 {
+  echo "Destroying tickets table...\n";
+  $dbt = new DBTickets();
+  $dbt->admin_destroy_all_structures();
   echo "Destroying users DB...\n";
   $db = new DBUser();
   $db->admin_destroy_all_structures();
