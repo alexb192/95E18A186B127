@@ -22,7 +22,6 @@ if (!UserUtils::is_admin())
             </tr>
 
             <?php
-                $counter = 0;
                 $db = new DBTickets();
                 $everything = $db->lookup_all();
             ?>
@@ -32,22 +31,21 @@ if (!UserUtils::is_admin())
                 {
             ?>
 
-            <tr id="<?php echo "$counter" ?>">
+            <tr>
             <td><?php echo "$var[0]" ?></td>
             <td><?php echo "$var[1]" ?></td>
             <td><?php echo "$var[2]" ?></td>
-            <td>
-                <button onclick="deleteRowOnClick(1)">Delete</button>
-            </td>
             </tr>
-
-            <?php $counter++; } ?>
+            <?php } ?>
             
         </table>
 
+        <button onclick="deleteRowOnClick()">Delete All Tickets</button>
+        
         <script>
-            function deleteRowOnClick(rowNumber) {
-            document.getElementById("ticketTable").deleteRow(rowNumber);
+            function deleteRowOnClick() {
+            var myTable = document.getElementById("ticketTable");
+            var rowCount = myTable.rows.length; while(--rowCount) myTable.deleteRow(rowCount);
         }
         </script>
     </body>
