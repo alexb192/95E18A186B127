@@ -32,10 +32,10 @@ if (!UserUtils::is_admin())
                 {
             ?>
 
-            <tr id="<?php $counter ?>">
-            <td><?php $var[0] ?></td>
-            <td><?php $var[1] ?></td>
-            <td><?php $var[2] ?></td>
+            <tr id="<?php echo "$counter" ?>">
+            <td><?php echo "$var[0]" ?></td>
+            <td><?php echo "$var[1]" ?></td>
+            <td><?php echo "$var[2]" ?></td>
             <td>
                 <button onclick="deleteRow(0)">Delete</button>
             </td>
