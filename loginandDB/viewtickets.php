@@ -37,7 +37,7 @@ if (!UserUtils::is_admin())
             <td><?php echo "$var[1]" ?></td>
             <td><?php echo "$var[2]" ?></td>
             <td>
-                <button onclick="deleteRow(0)">Delete</button>
+                <button onclick="deleteRowOnClick(0)">Delete</button>
             </td>
             </tr>
 
@@ -48,7 +48,7 @@ if (!UserUtils::is_admin())
 </html>
 
 <script>
-    function deleteRow(var rowNumber) {
+    function deleteRowOnClick(var rowNumber) {
         document.getElementById("ticketTable").deleteRow(rowNumber);
     }
 </script>
