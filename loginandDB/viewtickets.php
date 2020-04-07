@@ -13,13 +13,20 @@ if (!UserUtils::is_admin())
 
 <html>
     <body>
-        <table>
+        <table style="width:100%>
+                    <tr>
+                        <th>TicketID</th>
+                        <th>Username</th>
+                        <th>Content</th>
+                    </tr>
             <?php
                 $db = new DBTickets();
                 $everything = $db->lookup_all();
+
                 foreach ($everything as $var)
                 {
-                    echo "\n", $var[0], "\t\t", $var[1], "\t\t", $var[2];
+                    // echo "\n", $var[0], "\t\t", $var[1], "\t\t", $var[2];
+                    echo "<tr><td>$var[0]</td><td>$var[1]</td><td>$var[2]</td></tr>";
                 }
             ?>
         </table>
