@@ -5,20 +5,22 @@ include('masterpage.php');
 
 if (!UserUtils::is_admin())
 {
-  HTTPUtils::redirect('login.php');
+  HTTPUtils::redirect('mainPage.php');
   exit(0);
 }
 
 ?>
 
 <html>
+<link rel="stylesheet" type="text/css" href="viewtickets.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <body>
         <table id="ticketTable">
 
             <tr>
-                        <th>TicketID</th>
-                        <th>Username</th>
-                        <th>Content</th>
+                    <th>TicketID</th>
+                    <th>Username</th>
+                    <th>Comments</th>
             </tr>
 
             <?php
@@ -40,14 +42,9 @@ if (!UserUtils::is_admin())
             
         </table>
 
-        <button onclick="deleteRowOnClick()">Delete All Tickets</button>
+        <button class = "button" onclick="deleteRowOnClick()">Delete All Tickets</button>
         
-        <script>
-            function deleteRowOnClick() {
-            var myTable = document.getElementById("ticketTable");
-            var rowCount = myTable.rows.length; while(--rowCount) myTable.deleteRow(rowCount);
-        }
-        </script>
+        <script src ='./viewtickets.js'></script>
     </body>
 
 

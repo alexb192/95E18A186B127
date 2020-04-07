@@ -25,8 +25,8 @@ if (UserUtils::is_logged_in())
     <div class="container">
      
       <form action="processlogin.php" method="post">
-        <b>Username:</b> <input type="text" oninvalid="alert('You must enter a username!');" required name="uname" required/><br />
-        <b>Password:</b> <input type="password" oninvalid="alert('You must enter a password!');" required name="pass" required/><br />
+        <b>Username</b> <input type="text" oninvalid="alert('You must enter a username!');" required name="uname" required/><br />
+        <b>Password</b> <input type="password" oninvalid="alert('You must enter a password!');" required name="pass" required/><br />
         <input class="submitbutton" type="submit" value="Log In" />
          
         <?php

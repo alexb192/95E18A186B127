@@ -1,7 +1,5 @@
 <?php
 
-
-
 final class DBTickets extends DB
 {
  
@@ -76,12 +74,12 @@ ZZEOF;
   //
   // Erases an existing user $user from the DBUser table.
   //
-  public function erase($ticketid)
+  public function erase()
   {
     $entry = array( ':ticketid' => $ticketid );
 
     // Create the SQL prepared statement and delete the entry...
-    $sql = 'DELETE FROM tickets WHERE ticketid = :ticketid';
+    $sql = 'DELETE FROM tickets';
     $stmt = $this->db_handle()->prepare($sql);
     $stmt->execute($entry);
   }

@@ -141,7 +141,7 @@ $(document).ready(function() {
   };
 
   // saves to local storage
-  // conclick function to listen for user clicks on plan area
+  // onclick function to listen for user clicks on plan area
   $(document).on('click','i', function(event) {
     event.preventDefault();  
 

@@ -2,6 +2,13 @@
     require_once('common.php');
     $content = "This is the page content";
     include('masterpage.php');
+
+if (!UserUtils::is_logged_in())
+{
+  $message = "You must log in to access this page.";
+  echo "<script type='text/javascript'>alert('$message'); window.location.href='login.php'</script>";
+  exit(0);
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +35,7 @@
       <form action="processcontactus.php" method="post">
       <!-- <form method="post"> -->
 
-        <textarea name = "comments" id="mytextarea"></textarea>
+        <textarea name = "comments" id="mytextarea" ></textarea>
        
         <input class="submitbutton" type="submit" value="Submit" />
       </form>
