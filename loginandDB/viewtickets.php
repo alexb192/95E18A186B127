@@ -14,22 +14,18 @@ if (!UserUtils::is_admin())
 
 <html>
     <body>
-        <table>
-            <?php
-                $everything = DBTickets::lookup_all();
-                foreach ($everything as $ticketid=>$user=>$text)
-                {
-            ?>
 
-                <tr>
-                    <td><?php echo $ticketid; ?></td>
-                    <td><?php echo $user; ?></td>
-                    <td><?php echo $text; ?></td>
-                </tr>
+        <?php
+            $everything = DBTickets::lookup_all();
+            echo "<table>";
 
-            <?php
-                }
-            ?>
-        </table>
+            while ($row_users = mysqli_fetch_array($everything)) {
+                //output a row here
+                echo "<tr><td>".($row_users['ticketid'])."</td></tr>";
+            }
+
+            echo "</table>";
+        ?>
+
     </body>
 </html>
