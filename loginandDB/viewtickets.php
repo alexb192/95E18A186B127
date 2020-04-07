@@ -14,22 +14,35 @@ if (!UserUtils::is_admin())
 <html>
     <body>
         <table id="ticketTable">
-                    <tr>
+
+            <tr>
                         <th>TicketID</th>
                         <th>Username</th>
                         <th>Content</th>
-                    </tr>
+            </tr>
+
             <?php
                 $counter = 0;
                 $db = new DBTickets();
                 $everything = $db->lookup_all();
+            ?>
 
+            <?php
                 foreach ($everything as $var)
                 {
-                    echo "<tr id='$counter'><td>$var[0]</td><td>$var[1]</td><td>$var[2]</td><td><button onclick='deleteRow($counter)'>Delete</button></td></tr>";
-                    $counter++;
-                }
             ?>
+
+            <tr id="<?php $counter ?>">
+            <td><?php $var[0] ?></td>
+            <td><?php $var[1] ?></td>
+            <td><?php $var[2] ?></td>
+            <td>
+                <button onclick="deleteRow(0)">Delete</button>
+            </td>
+            </tr>
+
+            <?php $counter++; } ?>
+            
         </table>
     </body>
 </html>
