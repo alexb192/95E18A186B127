@@ -19,7 +19,7 @@ if (!UserUtils::is_admin())
                 $everything = $db->lookup_all();
                 foreach ($everything as $var)
                 {
-                    echo "\n", $var['ticketid'], "\t\t", $var['user'], "\t\t", $var['contents'];
+                    echo "\n", $var[0], "\t\t", $var[1], "\t\t", $var[2];
                 }
             ?>
         </table>
