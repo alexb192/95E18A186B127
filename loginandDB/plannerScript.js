@@ -23,7 +23,7 @@ $(document).ready(function() {
   } else {
     // this should only occur on first time the app is loaded in the browser
     planTextArr = new Array(17);
-    planTextArr[7] = "Reminder: something something something.";
+    planTextArr[7] = "Example Entry: Make an entry and press the save button!";
   }
 
   // set variable referencing planner element
@@ -133,7 +133,7 @@ $(document).ready(function() {
       $hourRow.css("background-color","lightcoral")
     } else if ( hour > currHour) {
       if (test) { console.log("greaterthan"); }
-      $hourRow.css("background-color","lightgreen")
+      $hourRow.css("background-color","#99CC99")
     } else {
       if (test) { console.log("eqaul"); }
       $hourRow.css("background-color","lightblue")

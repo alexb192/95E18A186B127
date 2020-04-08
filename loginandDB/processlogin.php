@@ -17,18 +17,23 @@ if (count($_POST) == 2
   && array_key_exists('uname', $_POST)
   && array_key_exists('pass', $_POST))
 {
+
+  // stripping html tags to prevent html injection attacks
+  $uname = strip_tags($_POST['uname']);
+  $pass = strip_tags($_POST['pass']);
+  
   // check if the user has a valid password
   $db = new DBUser();
-  if ($db->check_user_pass($_POST['uname'], $_POST['pass']))
+  if ($db->check_user_pass($uname, $pass))
   {
     // valid login
-    UserUtils::log_in_user($_POST['uname']);
+    UserUtils::log_in_user($uname);
     $x = FALSE;
     
     // redirect if the user is admin
-    if ($db->check_admin($_POST['uname']))
+    if ($db->check_admin($uname))
     {
-      UserUtils::log_in_admin($_POST['uname']);
+      UserUtils::log_in_admin($uname);
       $REDIRECT=$VALID_ADMIN_REDIRECT;
     }
     // redirect if user is not admin

@@ -14,18 +14,18 @@ include './masterpage_cookiecheck.php';
   <div>
     <nav>
       <ul id="navbaritems" class="navbaritems">
-        <li id="navbarli" class="navbarli"><a href="mainPage.php">Home</a></li>
+        <li id="navbarli" class="navbarli"><a href="mainPage.php">HOME</a></li>
         <li id="navbarli" class="navbarli">
-          <a href="viewcalendar.php">View Calendar</a>
+          <a href="viewcalendar.php">VIEW CALENDAR</a>
         </li>
-        <li id="navbarli" class="navbarli"><a href="settings.php">Settings</a></li>
+        <li id="navbarli" class="navbarli"><a href="settings.php">SETTINGS</a></li>
         <?php if (!UserUtils::is_logged_in()) { ?>
-        <li id="navbarli" class="navbarli"><a href="login.php">Log In</a></li>
+        <li id="navbarli" class="navbarli"><a href="login.php">LOG IN</a></li>
         <?php } else { ?>
         <?php if (UserUtils::is_admin()) { ?>
-        <li id="navbarli" class="navbarli"><a href="adminpage.php">Admin Hub</a></li>
+        <li id="navbarli" class="navbarli"><a href="adminpage.php">ADMIN HUB</a></li>
         <?php } ?>
-        <li id="navbarli" class="navbarli"><a href="logout.php">Log Out</a></li>
+        <li id="navbarli" class="navbarli"><a href="logout.php">LOG OUT</a></li>
         <?php }?>
       </ul>
     </nav>
