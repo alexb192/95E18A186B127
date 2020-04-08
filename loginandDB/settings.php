@@ -22,6 +22,9 @@ include './masterpage_cookiecheck.php';
 
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="settings.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src ='./settings.js'></script>
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -31,10 +34,20 @@ include './masterpage_cookiecheck.php';
   <div class="container">
     <div class="choices">
       <h1>Theme Selection</h1>
-      <a class="dark" href="settings.php?choice=dark">Dark</a>
-      <a class="light" href="settings.php?choice=light">Light</a>
+      <?php if (UserUtils::is_logged_in()) 
+      { ?>
+        <a class="dark" onclick="setDarkOnClick()" href="settings.php?choice=dark">Dark</a>
+        <a class="light" onclick="setLightOnClick()" href="settings.php?choice=light">Light</a>
+<?php } ?>
+    <?php if (!UserUtils::is_logged_in()) 
+          { ?>
+            <a class="dark" href="settings.php?choice=dark">Dark</a>
+            <a class="light" href="settings.php?choice=light">Light</a>
+    <?php } ?>
+      
     </div>
 </div>
+
   </body>
 </html>
 

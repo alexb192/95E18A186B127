@@ -49,7 +49,8 @@ final class DBUser extends DB
 CREATE TABLE users (
   user VARCHAR(80) PRIMARY KEY,
   pass VARCHAR(255) NOT NULL,
-  isadmin BOOLEAN NOT NULL DEFAULT(FALSE)
+  isadmin BOOLEAN NOT NULL DEFAULT(FALSE),
+  settings BOOLEAN NOT NULL DEFAULT(FALSE) 
 )
 ZZEOF;
     return $this->db_handle()->exec($sql); // This is NOT a prepared statement call!
@@ -108,17 +109,18 @@ ZZEOF;
   //
   // Inserts a new user $user into the DBUser table having password $pass.
   //
-  public function insert($user, $pass, $isadmin=FALSE)
+  public function insert($user, $pass, $isadmin=FALSE, $settings=FALSE)
   {
     // Create the entry to add...
     $entry = array(
       ':user' => $user,
       ':pass' => $this->compute_password_hash($pass),
-      ':isadmin' => ($isadmin == TRUE ? 1 : 0 )
+      ':isadmin' => ($isadmin == TRUE ? 1 : 0 ),
+      ':settings' => ($settings == TRUE ? 1 : 0 ),
     );
 
     // Create the SQL prepared statement and insert the entry...
-    $sql = 'INSERT INTO users VALUES (:user, :pass, :isadmin)';
+    $sql = 'INSERT INTO users VALUES (:user, :pass, :isadmin, :settings)';
     $stmt = $this->db_handle()->prepare($sql);
     return $stmt->execute($entry);
   }
@@ -194,6 +196,55 @@ ZZEOF;
     }
     $mysqli -> close();
   }
+
+  // Function to check for user settings
+  public function check_settings($user)
+  {
+    $mysqli = new mysqli("localhost", "alian_project", "3340WWW", "alian_db1");
+
+    try
+    {
+      if ($result = $mysqli->query("SELECT * FROM users WHERE user='$user' AND settings = 1 LIMIT 1")) {
+
+        if (mysqli_num_rows($result) === 1)
+        {
+          return TRUE;
+        }
+        else 
+        {
+          return FALSE;
+        }
+        $result -> free_result();
+      }
+    }
+    catch (PDOException $e)
+    {
+      return FALSE;
+    }
+    $mysqli -> close();
+  }
+
+  public function set_settings($user, $settings)
+  {
+    $mysqli = new mysqli("localhost", "alian_project", "3340WWW", "alian_db1");
+    
+    if(!isset($settings))
+    {
+      $settings = FALSE;
+    }
+
+    if($settings)
+    {
+      $mysqli->query("UPDATE users SET settings = TRUE WHERE user='$user'");
+    }
+    else
+    {
+      $mysqli->query("UPDATE users SET settings = FALSE WHERE user='$user'");
+    }
+
+    $mysqli -> close();
+  }
+
 
   //
   // lookup($user)
