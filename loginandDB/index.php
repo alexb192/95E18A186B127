@@ -14,7 +14,7 @@ require_once('common.php');
   ?>
 <?php } ?>
 
-
+<!-- index simply for redirecting -->
 
 
 </body>
